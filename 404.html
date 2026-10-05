@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Tìm kiếm · BẢN84</title>
-<meta name="description" content="Tìm bài và video BẢN84 theo từ khóa.">
-<meta name="robots" content="noindex"><link rel="canonical" href="https://ban84.vn/tim-kiem.html">
+<title>Không tìm thấy trang · BẢN84</title>
+<meta name="description" content="Trang này không tồn tại hoặc đã chuyển địa chỉ.">
+<meta name="robots" content="noindex"><link rel="canonical" href="https://ban84.vn/404.html">
 <meta property="og:site_name" content="BẢN84"><meta property="og:locale" content="vi_VN">
-<meta property="og:title" content="Tìm kiếm · BẢN84">
-<meta property="og:description" content="Tìm bài và video BẢN84 theo từ khóa.">
+<meta property="og:title" content="Không tìm thấy trang · BẢN84">
+<meta property="og:description" content="Trang này không tồn tại hoặc đã chuyển địa chỉ.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://ban84.vn/tim-kiem.html">
+<meta property="og:url" content="https://ban84.vn/404.html">
 <meta property="og:image" content="https://ban84.vn/img/og-default.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Tìm kiếm · BẢN84"><meta name="twitter:description" content="Tìm bài và video BẢN84 theo từ khóa."><meta name="twitter:image" content="https://ban84.vn/img/og-default.jpg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Không tìm thấy trang · BẢN84"><meta name="twitter:description" content="Trang này không tồn tại hoặc đã chuyển địa chỉ."><meta name="twitter:image" content="https://ban84.vn/img/og-default.jpg">
 <meta name="theme-color" content="#031A34">
 <link rel="icon" href="img/icon-192.png" type="image/png" sizes="192x192"><link rel="icon" href="img/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="img/icon-180.png"><link rel="manifest" href="manifest.webmanifest">
@@ -198,13 +198,13 @@ footer .tagline{font-size:12.5px;max-width:48ch}
   <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
 </div></header>
 
-<main class="wrap">
-  <section style="padding-block:44px 8px;"><div class="eyebrow">Tìm kiếm</div>
-    <form class="sbox" id="sform" style="margin-top:14px;"><input id="sq" type="search" placeholder="Tìm bài, video…" autofocus><button class="btn navy" type="submit">Tìm</button></form>
-    <div class="sres" id="sres"></div>
-  </section>
-  <section class="list" id="slist"></section>
-</main>
+<main class="wrap"><section style="padding-block:72px 96px;max-width:640px;">
+  <div class="eyebrow">404</div>
+  <h1 class="h2" style="margin-top:12px;">Trang này <span class="hl">chưa có</span>, hoặc đã đổi địa chỉ.</h1>
+  <p class="lead" style="margin-top:16px;">Thử tìm theo từ khóa, hoặc về trang chủ xem bài mới nhất.</p>
+  <form class="sbox" action="tim-kiem.html" method="get" style="margin-top:24px;"><input name="q" type="search" placeholder="Tìm bài, video…" aria-label="Tìm kiếm"><button class="btn navy" type="submit">Tìm</button></form>
+  <p style="margin-top:22px;"><a class="btn line" href="index.html">Về trang chủ</a></p>
+</section></main>
 <footer><div class="wrap">
   <img src="img/lockup-dark.png" alt="BẢN84 — Business · Applied AI · Network" width="950" height="394">
   <div class="fn"><a href="index.html">Trang chủ</a><a href="video.html">Video</a><a href="gioi-thieu.html#tin-duoc">Vì sao tin được</a><a href="nguyen-tac.html">Nguyên tắc &amp; đính chính</a><a href="gioi-thieu.html#hoi">Hỏi BẢN84</a></div>
@@ -226,24 +226,6 @@ footer .tagline{font-size:12.5px;max-width:48ch}
   var fb=document.querySelector('.fbwrap'); if(fb && /claude/.test(location.hostname)){var fr=fb.querySelector('iframe'),fl=fb.querySelector('.fallback'); if(fr) fr.remove(); if(fl) fl.hidden=false;}
   document.querySelectorAll('button[data-share]').forEach(function(b){b.addEventListener('click',function(){var d={title:b.getAttribute('data-title'),url:b.getAttribute('data-share')};
     if(navigator.share){navigator.share(d).catch(function(){});}else{copyText(d.url,b,'Đã sao chép link');}});});
-})();
-</script>
-
-<script>
-(function(){
-  function norm(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d');}
-  var input=document.getElementById('sq'), res=document.getElementById('sres'), list=document.getElementById('slist'), data=null;
-  function esc(s){return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
-  function snippet(text,terms){var n=norm(text);var i=-1;for(var t of terms){i=n.indexOf(t);if(i>=0)break;}if(i<0)i=0;var a=Math.max(0,i-70),b=Math.min(text.length,i+150);var s=(a>0?'…':'')+text.slice(a,b)+(b<text.length?'…':'');var out=esc(s);terms.forEach(function(t){if(t.length<2)return;var re=new RegExp('('+t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig');out=out.replace(re,'<mark>$1</mark>');});return out;}
-  function run(){var q=(input.value||'').trim();var terms=norm(q).split(/\s+/).filter(Boolean);
-    if(!data||!terms.length){list.innerHTML='';res.textContent=q?'':'Gõ từ khóa: thuế, RAM, QR, cà phê, xăng…';return;}
-    var hits=data.map(function(p){var sc=0;var T=norm(p.title),P=norm(p.points),B=norm(p.body);terms.forEach(function(t){if(T.indexOf(t)>=0)sc+=6;if(P.indexOf(t)>=0)sc+=3;var m=B.split(t).length-1;sc+=Math.min(m,5);});return {p:p,sc:sc};}).filter(function(h){return h.sc>0;}).sort(function(a,b){return b.sc-a.sc;});
-    res.textContent=hits.length?hits.length+' kết quả cho “'+q+'”':'Không có bài nào khớp “'+q+'”. Thử từ khóa khác, hoặc gửi câu hỏi cho BẢN84.';
-    list.innerHTML=hits.map(function(h){var p=h.p;var src=(norm(p.points).indexOf(terms[0])>=0?p.points:p.body);return '<article class="card"><a class="cover" href="'+p.url+'"><img src="'+p.cover+'" alt="" loading="lazy"></a><div><div class="meta" style="margin-top:0"><span class="tag cat">'+p.cat+'</span><span>'+p.date+'</span></div><h3><a href="'+p.url+'">'+esc(p.title)+'</a></h3><p class="snip">'+snippet(src,terms)+'</p></div></article>';}).join('');}
-  var m=/[?&]q=([^&]*)/.exec(location.search); if(m){try{input.value=decodeURIComponent(m[1].replace(/\+/g,' '));}catch(e){}}
-  fetch('data/search.json').then(function(r){return r.json();}).then(function(d){data=d;run();}).catch(function(){res.textContent='Không tải được dữ liệu tìm kiếm.';});
-  input.addEventListener('input',run);
-  var f=document.getElementById('sform'); if(f) f.addEventListener('submit',function(e){e.preventDefault();run();});
 })();
 </script>
 </body></html>
