@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="BẢN84 — chuyện kinh tế và AI, giải thích cho chính bạn. Mỗi ngày một video 3–4 phút trên TikTok @ban84vn. Mỗi con số có nguồn và ngày.">
+<meta property="og:title" content="BẢN84 — Chuyện kinh tế và AI, giải thích cho chính bạn">
+<meta property="og:description" content="Kinh tế & chính sách · AI ứng dụng · Người trẻ đang làm. Hiểu đúng để dám bắt đầu.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/lockup-dark.png">
+<link rel="icon" href="img/logo-circle.png" type="image/png">
+<title>BẢN84</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>html{background:#031A34}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<style>
+/* Layout: minimalist editorial front page — generous whitespace, hairlines instead of boxes, real photographs, one accent. Navy only for the masthead, hero, broadcast schedule and the ask section. */
+:root {
+  --bg:#FBF1E2; --bg2:#FFFFFF; --ink:#031A34; --ink2:#4A5E74; --muted:#8C7A63; --line:rgba(3,26,52,.12);
+  --accent:#E07000; --accent-ink:#8A5606; --amber:#FFBF30; --teal:#1F6F69; --teal-soft:#DDF3F1;
+  --navy:#031A34; --navy2:#0C2B45; --cream:#FBF1E2; --on-navy:#FBF1E2; --on-navy2:#C9D6E3; --navy-line:rgba(251,241,226,.14);
+  --font:'Be Vietnam Pro', 'Segoe UI', Roboto, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg:#06182E; --bg2:#0C2B45; --ink:#FBF1E2; --ink2:#C9D6E3; --muted:#9FB3C8; --line:rgba(251,241,226,.14);
+  --accent:#FFBF30; --accent-ink:#FFBF30; --teal:#7FE0D8; --teal-soft:rgba(63,184,175,.16);
+  --navy:#031A34; --navy2:#0A2440; color-scheme:dark;
+} }
+:root[data-theme="dark"] {
+  --bg:#06182E; --bg2:#0C2B45; --ink:#FBF1E2; --ink2:#C9D6E3; --muted:#9FB3C8; --line:rgba(251,241,226,.14);
+  --accent:#FFBF30; --accent-ink:#FFBF30; --teal:#7FE0D8; --teal-soft:rgba(63,184,175,.16);
+  --navy:#031A34; --navy2:#0A2440; color-scheme:dark;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } *, *::before, *::after { transition:none !important; animation:none !important; } }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:var(--font); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+img { max-width:100%; display:block; }
+a { color:inherit; }
+h1,h2,h3,h4 { margin:0; text-wrap:balance; line-height:1.12; letter-spacing:-0.015em; }
+p { margin:0; }
+ul { margin:0; padding:0; list-style:none; }
+button { font:inherit; cursor:pointer; }
+:focus-visible { outline:3px solid var(--amber); outline-offset:3px; }
+.wrap { width:min(1120px, 100% - 48px); margin-inline:auto; }
+@media (max-width:600px){ .wrap { width:calc(100% - 32px); } }
+section { padding-block:104px; }
+@media (max-width:700px){ section { padding-block:64px; } }
+.dark { background:var(--navy); color:var(--on-navy); }
+.eyebrow { font-size:11.5px; letter-spacing:.26em; text-transform:uppercase; font-weight:700; color:var(--accent-ink); }
+.dark .eyebrow { color:var(--amber); }
+.h2 { font-size:clamp(30px, 4.2vw, 46px); font-weight:800; margin-top:14px; max-width:20ch; }
+.h2 .hl { color:var(--accent); }
+.dark .h2 .hl { color:var(--amber); }
+.lead { font-size:18px; color:var(--ink2); max-width:56ch; margin-top:14px; }
+.dark .lead { color:var(--on-navy2); }
+.head { display:flex; justify-content:space-between; align-items:flex-end; gap:32px; margin-bottom:48px; flex-wrap:wrap; }
+.head .lead { margin-top:0; max-width:40ch; }
+.rule { height:1px; background:var(--line); }
+.btn { display:inline-flex; align-items:center; gap:8px; padding:13px 22px; border-radius:999px; font-weight:700; font-size:14.5px; text-decoration:none; border:1px solid transparent; transition:transform .15s ease; }
+.btn:hover { transform:translateY(-1px); }
+.btn.amber { background:var(--amber); color:#4A2E0A; }
+.btn.ghost { background:transparent; color:var(--on-navy); border-color:rgba(251,241,226,.4); }
+.btn.navy { background:var(--navy); color:var(--cream); }
+.btn.line { background:transparent; color:var(--ink); border-color:var(--ink); }
+.tag { display:inline-block; font-size:10.5px; letter-spacing:.18em; font-weight:800; padding:4px 10px; border-radius:999px; text-transform:uppercase; }
+.tag.soon { background:var(--teal-soft); color:var(--teal); }
+.tag.live { background:rgba(255,191,48,.18); color:var(--accent-ink); }
+.dark .tag.live { color:var(--amber); }
+.tag.try { background:rgba(3,26,52,.07); color:var(--ink2); }
+
+/* masthead */
+.mast { position:sticky; top:env(safe-area-inset-top, 0px); z-index:50; background:var(--navy); color:var(--on-navy); border-bottom:1px solid var(--navy-line); }
+.mast .wrap { display:flex; align-items:center; justify-content:space-between; gap:16px; height:68px; }
+.mast .brand img { height:30px; width:auto; }
+.nav { display:flex; gap:28px; align-items:center; }
+.nav a { font-size:13.5px; font-weight:600; text-decoration:none; color:var(--on-navy2); letter-spacing:.01em; }
+.nav a:hover { color:var(--amber); }
+.menu-btn { display:none; background:transparent; border:1px solid rgba(251,241,226,.35); color:var(--on-navy); border-radius:999px; padding:8px 14px; }
+@media (max-width:900px){
+  .nav { display:none; position:absolute; left:0; right:0; top:68px; background:var(--navy); flex-direction:column; align-items:flex-start; padding:14px 24px 20px; gap:16px; border-bottom:1px solid var(--navy-line); }
+  .nav.open { display:flex; }
+  .menu-btn { display:inline-flex; }
+  .mast .cta { display:none; }
+}
+
+/* hero */
+.hero { padding-block:88px 72px; position:relative; overflow:hidden; }
+.hero::before { content:""; position:absolute; inset:0; background:radial-gradient(760px 520px at 88% 8%, rgba(255,191,48,.13), transparent 60%); pointer-events:none; }
+.hero .grid { position:relative; display:grid; grid-template-columns:1.05fr .95fr; gap:48px; align-items:center; }
+.hero .copy { display:flex; flex-direction:column; gap:26px; }
+.hero .lockup { height:104px; width:auto; }
+.hero h1 { font-size:clamp(40px, 5.6vw, 68px); font-weight:800; letter-spacing:-0.03em; line-height:1.02; }
+.hero h1 .hl { color:var(--amber); }
+.hero .lead { font-size:19px; margin-top:0; max-width:46ch; }
+.hero .actions { display:flex; gap:12px; flex-wrap:wrap; }
+.hero .meta { display:flex; gap:28px; flex-wrap:wrap; font-size:13px; color:var(--on-navy2); }
+.hero .meta b { color:var(--amber); font-weight:800; letter-spacing:.1em; margin-right:8px; }
+.phones { display:flex; gap:16px; justify-content:center; align-items:flex-end; }
+.phone { width:min(184px, 28vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; border:2px solid rgba(251,241,226,.18); box-shadow:0 30px 60px rgba(0,0,0,.5); background:#000; flex:none; }
+.phone img { width:100%; height:100%; object-fit:cover; }
+.phone:nth-child(2) { transform:translateY(-22px); }
+.phones + .cap { text-align:center; font-size:12px; color:var(--muted); margin-top:18px; }
+@media (max-width:900px){ .hero .grid { grid-template-columns:1fr; } .hero .lockup { height:88px; } }
+
+/* promises strip */
+.strip { padding-block:0; }
+.strip .wrap { display:grid; grid-template-columns:repeat(3, 1fr); }
+.strip .it { padding:34px 28px 34px 0; border-right:1px solid var(--line); margin-right:28px; }
+.strip .it:last-child { border-right:0; margin-right:0; }
+.strip b { display:block; font-size:19px; font-weight:800; margin-bottom:6px; }
+.strip p { font-size:14.5px; color:var(--ink2); }
+@media (max-width:900px){ .strip .wrap { grid-template-columns:1fr; } .strip .it { border-right:0; margin-right:0; border-bottom:1px solid var(--line); padding:22px 0; } .strip .it:last-child { border-bottom:0; } }
+
+/* pillars — photo cards */
+.pillars { display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
+.pillar { min-width:0; display:flex; flex-direction:column; gap:14px; }
+.pillar .ph { aspect-ratio:4/3; border-radius:16px; overflow:hidden; position:relative; background:var(--navy); }
+.pillar .ph img { width:100%; height:100%; object-fit:cover; }
+.pillar .ph .ban { position:absolute; left:14px; top:14px; display:inline-flex; align-items:center; gap:9px; background:var(--navy); color:var(--cream); padding:7px 12px 7px 10px; border-radius:999px; font-size:11px; letter-spacing:.2em; font-weight:800; }
+.pillar .ph .ban img { height:18px; width:auto; }
+.pillar h3 { font-size:24px; font-weight:800; margin-top:4px; }
+.pillar .line1 { font-weight:700; color:var(--accent); font-size:15.5px; }
+.pillar p { color:var(--ink2); font-size:15.5px; }
+.pillar .q { font-size:14px; color:var(--ink2); padding-top:12px; border-top:1px solid var(--line); margin-top:auto; }
+.pillar .q b { display:block; font-size:10.5px; letter-spacing:.2em; color:var(--teal); margin-bottom:4px; }
+@media (max-width:900px){ .pillars { grid-template-columns:1fr; } }
+
+/* topics */
+.topics { display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
+.topic { min-width:0; display:flex; flex-direction:column; gap:12px; }
+.topic .ph { aspect-ratio:4/3; border-radius:16px; overflow:hidden; background:var(--navy); position:relative; }
+.topic .ph img { width:100%; height:100%; object-fit:cover; }
+.topic .ph.frames { display:flex; gap:10px; justify-content:center; align-items:flex-end; padding:18px 18px 0; }
+.topic .ph.frames .phone { width:31%; border-radius:12px; border-width:1.5px; box-shadow:0 14px 28px rgba(0,0,0,.45); }
+.topic .ph.frames .phone:nth-child(2) { transform:translateY(-10px); }
+.topic .ph.frames .phone img { height:auto; aspect-ratio:9/16; }
+.topic h3 { font-size:21px; font-weight:800; margin-top:6px; }
+.topic p { color:var(--ink2); font-size:15px; }
+.topic .meta { display:flex; gap:10px; align-items:center; flex-wrap:wrap; font-size:12.5px; color:var(--muted); margin-top:auto; padding-top:6px; }
+.cta-row { margin-top:56px; padding-top:28px; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; }
+.cta-row p { font-size:20px; font-weight:700; max-width:30ch; }
+.cta-row p b { color:var(--accent); }
+@media (max-width:900px){ .topics { grid-template-columns:1fr; } }
+
+/* schedule */
+.sched { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start; }
+.slots { display:flex; flex-direction:column; }
+.slot { display:flex; align-items:baseline; gap:24px; padding:22px 0; border-bottom:1px solid var(--navy-line); }
+.slot:last-child { border-bottom:0; }
+.slot b { font-size:44px; font-weight:800; color:var(--amber); letter-spacing:-0.03em; font-variant-numeric:tabular-nums; line-height:1; min-width:150px; }
+.slot span { font-size:15.5px; color:var(--on-navy2); }
+.fmts { display:flex; flex-direction:column; }
+.fmts li { display:flex; justify-content:space-between; align-items:center; gap:14px; padding:16px 0; border-bottom:1px solid var(--navy-line); font-size:16px; }
+.fmts li:last-child { border-bottom:0; }
+.fmts li span { font-size:13px; color:var(--on-navy2); white-space:nowrap; }
+.fmts li .tag { margin-left:10px; vertical-align:2px; }
+@media (max-width:900px){ .sched { grid-template-columns:1fr; gap:24px; } .slot b { min-width:120px; font-size:36px; } }
+
+/* trust */
+.trust { display:grid; grid-template-columns:repeat(5, 1fr); gap:0; border-top:1px solid var(--line); }
+.tr { padding:28px 24px 28px 0; border-right:1px solid var(--line); margin-right:24px; min-width:0; }
+.tr:last-child { border-right:0; margin-right:0; }
+.tr i { font-style:normal; font-size:12px; font-weight:800; letter-spacing:.2em; color:var(--accent-ink); }
+.tr h4 { font-size:19px; font-weight:800; margin-top:10px; }
+.tr p { font-size:14px; color:var(--ink2); margin-top:6px; }
+.trust-note { margin-top:40px; display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; padding-top:32px; border-top:1px solid var(--line); }
+.trust-note p { font-size:17.5px; color:var(--ink2); max-width:48ch; }
+.trust-note p b { color:var(--ink); }
+.trust-note .ph { aspect-ratio:16/9; border-radius:16px; overflow:hidden; }
+.trust-note .ph img { width:100%; height:100%; object-fit:cover; }
+@media (max-width:1000px){ .trust { grid-template-columns:repeat(2, 1fr); } .tr:nth-child(2n) { border-right:0; margin-right:0; } }
+@media (max-width:640px){ .trust { grid-template-columns:1fr; } .tr { border-right:0; margin-right:0; border-bottom:1px solid var(--line); } .trust-note { grid-template-columns:1fr; } }
+
+/* personas */
+.personas { display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; }
+.persona { min-width:0; }
+.persona .ph { aspect-ratio:4/3; border-radius:16px; overflow:hidden; }
+.persona .ph img { width:100%; height:100%; object-fit:cover; }
+.persona h4 { font-size:18px; margin-top:14px; }
+.persona p { font-size:14px; color:var(--ink2); margin-top:4px; }
+@media (max-width:1000px){ .personas { grid-template-columns:repeat(2, 1fr); } }
+@media (max-width:520px){ .personas { grid-template-columns:1fr; } }
+
+/* community */
+.comm { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
+.comm .ph { aspect-ratio:4/3; border-radius:16px; overflow:hidden; }
+.comm .ph img { width:100%; height:100%; object-fit:cover; }
+.comm ul { margin-top:24px; border-top:1px solid var(--line); }
+.comm li { padding:14px 0; border-bottom:1px solid var(--line); font-size:16.5px; display:flex; gap:14px; }
+.comm li b { color:var(--accent); font-weight:800; min-width:28px; }
+.comm .note { margin-top:18px; font-size:13.5px; color:var(--muted); max-width:48ch; }
+.comm .btn { margin-top:22px; }
+@media (max-width:900px){ .comm { grid-template-columns:1fr; gap:28px; } }
+
+/* ask */
+.ask-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:start; }
+.ask { display:flex; flex-direction:column; gap:14px; }
+.ask label { font-size:11.5px; letter-spacing:.2em; font-weight:800; color:var(--amber); }
+.ask select, .ask textarea { width:100%; font:inherit; font-size:15.5px; color:var(--on-navy); background:rgba(255,255,255,.05); border:1px solid rgba(251,241,226,.22); border-radius:12px; padding:13px 14px; }
+.ask textarea { min-height:120px; resize:vertical; }
+.ask .out { font-size:14px; color:var(--on-navy2); background:rgba(0,0,0,.2); border-radius:12px; padding:12px 14px; white-space:pre-wrap; line-height:1.5; }
+.ask .row { display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+.hint { font-size:12.5px; color:var(--muted); }
+.chips { display:flex; flex-direction:column; }
+.chip-row { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:18px 0; border-bottom:1px solid var(--navy-line); }
+.chip-row:first-child { border-top:1px solid var(--navy-line); }
+.chip-row b { display:block; font-size:10.5px; letter-spacing:.2em; color:var(--amber); }
+.chip-row span { font-size:18px; font-weight:600; user-select:all; word-break:break-all; }
+.cpy { flex:none; background:transparent; color:var(--on-navy); border:1px solid rgba(251,241,226,.35); border-radius:999px; padding:7px 13px; font-size:12.5px; font-weight:700; text-decoration:none; }
+.cpy:hover { background:rgba(255,255,255,.08); }
+.cpy.done { background:var(--amber); color:#4A2E0A; border-color:var(--amber); }
+@media (max-width:900px){ .ask-grid { grid-template-columns:1fr; } }
+
+/* about */
+.about { display:grid; grid-template-columns:300px 1fr; gap:56px; align-items:center; }
+.about .emb img { width:220px; height:220px; border-radius:50%; box-shadow:0 0 0 3px rgba(3,26,52,.08); margin:0 auto; }
+.about .txt p { font-size:18px; color:var(--ink2); max-width:54ch; }
+.about .txt p + p { margin-top:14px; }
+.about .txt p b { color:var(--ink); }
+.about .small { font-size:13.5px; color:var(--muted); margin-top:22px; }
+@media (max-width:900px){ .about { grid-template-columns:1fr; gap:28px; } }
+
+/* footer */
+footer { background:var(--navy); color:var(--on-navy2); border-top:1px solid var(--navy-line); padding-block:40px; font-size:13px; }
+footer .wrap { display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap; }
+footer img { height:60px; width:auto; }
+footer .fn { display:flex; gap:22px; flex-wrap:wrap; }
+footer .fn a { text-decoration:none; color:var(--on-navy2); }
+footer .fn a:hover { color:var(--amber); }
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="BẢN84"><img src="img/wm-dark.png" alt="BẢN84"></a>
+    <nav class="nav" id="nav" aria-label="Mục chính">
+      <a href="#ba-mang">Ba mảng</a>
+      <a href="#de-tai">Đề tài</a>
+      <a href="#lich">Lịch phát</a>
+      <a href="#tin-duoc">Vì sao tin được</a>
+      <a href="#cong-dong">Cộng đồng</a>
+      <a href="#hoi">Hỏi BẢN84</a>
+    </nav>
+    <a class="btn amber cta" href="https://www.tiktok.com/@ban84vn" target="_blank" rel="noopener">Theo dõi trên TikTok</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero dark">
+  <div class="wrap grid">
+    <div class="copy">
+      <img class="lockup" src="img/lockup-dark.png" alt="BẢN84 — Business · Applied AI · News">
+      <h1>Chuyện kinh tế và AI, <span class="hl">giải thích cho chính bạn</span>.</h1>
+      <p class="lead">Mỗi ngày một video 3–4 phút. Mỗi con số có nguồn và ngày. Không khuyến nghị đầu tư.</p>
+      <div class="actions">
+        <a class="btn amber" href="https://www.tiktok.com/@ban84vn" target="_blank" rel="noopener">Xem trên TikTok</a>
+        <a class="btn ghost" href="#hoi">Gửi câu hỏi</a>
+      </div>
+      <div class="meta"><span><b>LỊCH PHÁT</b>07:00 · 13:30 · 18:00</span><span><b>KÊNH</b>@ban84vn</span></div>
+    </div>
+    <div>
+      <div class="phones">
+        <div class="phone"><img src="img/frame-cover.jpg" alt="Khung hình video: Thuế giảm, dòng tiền đổi ra sao?"></div>
+        <div class="phone"><img src="img/frame-table.jpg" alt="Khung hình video: bảng so sánh thuế suất và tổng hóa đơn"></div>
+        <div class="phone"><img src="img/frame-question.jpg" alt="Khung hình video: câu hỏi mở cho người xem"></div>
+      </div>
+      <p class="cap">Bản dựng thử “VAT giảm và dòng tiền doanh nghiệp nhỏ”, 9/2026</p>
+    </div>
+  </div>
+</section>
+
+<section class="strip">
+  <div class="wrap">
+    <div class="it"><b>Hiểu trong 4 phút</b><p>Chuyện gì vừa xảy ra, và chạm đến bạn ở đâu.</p></div>
+    <div class="it"><b>Làm được một việc</b><p>Mỗi bài kết thúc bằng một việc cụ thể cho hôm nay.</p></div>
+    <div class="it"><b>Hỏi được, có người trả lời</b><p>Câu hỏi thật của bạn thành đề tài kế tiếp.</p></div>
+  </div>
+  <div class="wrap"><div class="rule"></div></div>
+</section>
+
+<section id="ba-mang">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">Ba mảng nội dung</div><h2 class="h2">Chuyện này <span class="hl">chạm đến ai?</span></h2></div>
+      <p class="lead">Một câu hỏi cho mọi bài: ai hưởng trước, ai chịu sau, và bạn nên làm gì.</p>
+    </div>
+    <div class="pillars">
+      <article class="pillar">
+        <div class="ph"><img src="img/vz-sme-packing.jpg" alt="Chủ cơ sở nhỏ đóng gói đơn hàng"><span class="ban"><img src="img/g-B-dark.png" alt="B">BUSINESS</span></div>
+        <h3>Kinh tế &amp; chính sách</h3>
+        <div class="line1">Chuyện vĩ mô, kể đến tận túi tiền</div>
+        <div class="q"><b>VÍ DỤ</b>VAT giảm, dòng tiền doanh nghiệp nhỏ có cải thiện?</div>
+      </article>
+      <article class="pillar">
+        <div class="ph"><img src="img/vz-newsroom.jpg" alt="Người làm việc trước nhiều màn hình"><span class="ban"><img src="img/g-Aplain-dark.png" alt="A">APPLIED AI</span></div>
+        <h3>AI ứng dụng</h3>
+        <div class="line1">Thử thật, đo thật, nói thật</div>
+        <div class="q"><b>VÍ DỤ</b>Giá RAM tăng có phải do làn sóng AI?</div>
+      </article>
+      <article class="pillar">
+        <div class="ph"><img src="img/ph-founder.jpg" alt="Một nhóm bạn trẻ cùng làm việc bên máy tính" style="object-position:50% 35%"><span class="ban"><img src="img/g-N-dark.png" alt="N">NEWS · NGƯỜI TRẺ</span></div>
+        <h3>Khởi nghiệp thật</h3>
+        <div class="line1">Người đang làm kể chuyện đang làm</div>
+        <div class="q"><b>VÍ DỤ</b>30 ngày đầu mở quán của một bạn 24 tuổi: tiền đi đâu?</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="de-tai" style="padding-top:0;">
+  <div class="wrap">
+    <div class="rule" style="margin-bottom:104px;"></div>
+    <div class="head">
+      <div><div class="eyebrow">Đề tài</div><h2 class="h2">Đang làm <span class="hl">tuần này</span></h2></div>
+      <p class="lead">Bản dựng thử được đánh dấu rõ. Bản phát hành lên TikTok theo lịch.</p>
+    </div>
+    <div class="topics">
+      <article class="topic">
+        <div class="ph frames">
+          <div class="phone"><img src="img/frame-cover.jpg" alt=""></div>
+          <div class="phone"><img src="img/frame-cashflow.jpg" alt=""></div>
+          <div class="phone"><img src="img/frame-table.jpg" alt=""></div>
+        </div>
+        <h3>VAT giảm, dòng tiền doanh nghiệp nhỏ có cải thiện?</h3>
+        <p>Thuế giảm 2% thì hóa đơn đổi bao nhiêu, tiền về sớm hay chậm, và điều gì cần kiểm lại trước khi kỳ vọng.</p>
+        <div class="meta"><span class="tag try">Bản dựng thử</span><span>Nguồn: datafiles.chinhphu.vn</span></div>
+      </article>
+      <article class="topic">
+        <div class="ph"><img src="img/vz-server.jpg" alt="Tủ máy chủ với dây mạng"></div>
+        <h3>Giá RAM tăng có phải do làn sóng AI?</h3>
+        <p>Chuỗi cung ứng chip nhớ đang ưu tiên ai, giá máy tính chịu ảnh hưởng ra sao, có nên nâng cấp lúc này.</p>
+        <div class="meta"><span class="tag try">Bản dựng thử</span><span>Applied AI</span></div>
+      </article>
+      <article class="topic">
+        <div class="ph"><img src="img/ph-close.jpg" alt="Một con phố buôn bán ở Việt Nam"></div>
+        <h3>30 ngày đầu mở quán: tiền đi đâu?</h3>
+        <p>Một bạn 24 tuổi ghi lại từng khoản tháng đầu: đặt cọc, thiết bị, nhân sự, thuế, và phần không ai nhắc trước.</p>
+        <div class="meta"><span class="tag soon">Đang tìm nhân vật</span><span>News · Người trẻ</span></div>
+      </article>
+    </div>
+    <div class="cta-row">
+      <p>Bạn muốn BẢN84 làm đề tài nào tiếp? <b>Câu hỏi thật là đề tài tốt nhất.</b></p>
+      <a class="btn navy" href="#hoi">Gửi đề tài</a>
+    </div>
+  </div>
+</section>
+
+<section id="lich" class="dark">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">Lịch phát</div><h2 class="h2">Ba khung giờ, <span class="hl">đúng giờ</span></h2></div>
+      <p class="lead">Video phân tích trên TikTok @ban84vn. Định dạng dài hơn ra mắt khi cộng đồng đã có người thật.</p>
+    </div>
+    <div class="sched">
+      <div class="slots">
+        <div class="slot"><b>07:00</b><span>Một chuyện đáng hiểu để bắt đầu ngày</span></div>
+        <div class="slot"><b>13:30</b><span>AI và công cụ, cho giờ nghỉ trưa</span></div>
+        <div class="slot"><b>18:00</b><span>Người trẻ đang làm, cho giờ tan tầm</span></div>
+      </div>
+      <ul class="fmts">
+        <li><div>Video phân tích 3–4 phút<span class="tag live">Đang phát</span></div><span>mỗi ngày</span></li>
+        <li><div>Giải mã chính sách<span class="tag soon">Sắp có</span></div><span>1 / tuần</span></li>
+        <li><div>AI thử thật<span class="tag soon">Sắp có</span></div><span>2 / tháng</span></li>
+        <li><div>Podcast “Hỏi cho rõ”<span class="tag soon">Sắp có</span></div><span>1 / tuần</span></li>
+        <li><div>Talkshow “Đang Làm”<span class="tag soon">Sắp có</span></div><span>2 tuần / buổi</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="tin-duoc">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">Vì sao tin được</div><h2 class="h2">Niềm tin là thứ <span class="hl">không mua được</span></h2></div>
+      <p class="lead">Năm bước cho mỗi bài, công khai để bạn kiểm tra ngược. Sai thì đính chính công khai.</p>
+    </div>
+    <div class="trust">
+      <div class="tr"><i>01</i><h4>Câu hỏi thật</h4><p>Từ dòng tin trong ngày và từ người xem</p></div>
+      <div class="tr"><i>02</i><h4>Về tận nguồn</h4><p>Văn bản gốc, số liệu thống kê, ghi nguồn và ngày</p></div>
+      <div class="tr"><i>03</i><h4>Tách bạch</h4><p>Dữ kiện · phát ngôn · nhận định · giả định</p></div>
+      <div class="tr"><i>04</i><h4>Kiểm chứng</h4><p>Máy đối chiếu số liệu; chấm theo chuẩn do con người đặt</p></div>
+      <div class="tr"><i>05</i><h4>Câu hỏi mở</h4><p>Người xem tự quyết. Không khuyến nghị đầu tư</p></div>
+    </div>
+    <div class="trust-note">
+      <p>AI làm phần lặp lại: gom nguồn, dựng hình, đối chiếu số liệu. <b>Con người giữ phán đoán</b> và chịu trách nhiệm cuối cùng. Nội dung có AI tham gia được ghi rõ ngay trên video.</p>
+      <div class="ph"><img src="img/ph-podcast.jpg" alt="Hai người trò chuyện trong phòng thu"></div>
+    </div>
+  </div>
+</section>
+
+<section id="danh-cho-ai" style="padding-top:0;">
+  <div class="wrap">
+    <div class="rule" style="margin-bottom:104px;"></div>
+    <div class="head">
+      <div><div class="eyebrow">Dành cho ai</div><h2 class="h2">Nếu bạn là một trong bốn người này</h2></div>
+    </div>
+    <div class="personas">
+      <article class="persona"><div class="ph"><img src="img/ph-young.jpg" alt=""></div><h4>Người trẻ đang tìm hướng đi</h4><p>Cơ hội nhỏ nhưng thật, và một nơi để hỏi.</p></article>
+      <article class="persona"><div class="ph"><img src="img/vz-women-discuss.jpg" alt=""></div><h4>Người mới khởi nghiệp</h4><p>Chính sách nào chạm đến mình, công cụ nào vừa túi tiền.</p></article>
+      <article class="persona"><div class="ph"><img src="img/ph-sme.jpg" alt=""></div><h4>Chủ hộ kinh doanh &amp; SME</h4><p>Thuế, giá, thanh toán đổi thì dòng tiền đổi ra sao.</p></article>
+      <article class="persona"><div class="ph"><img src="img/ph-citizen.jpg" alt=""></div><h4>Người quan tâm kinh tế</h4><p>Tình hình đất nước, bằng ngôn ngữ bữa cơm.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="cong-dong" style="padding-top:0;">
+  <div class="wrap">
+    <div class="rule" style="margin-bottom:104px;"></div>
+    <div class="comm">
+      <div class="ph"><img src="img/ph-community.jpg" alt="Một nhóm bạn trẻ trò chuyện trong buổi gặp mặt"></div>
+      <div>
+        <div class="eyebrow">Cộng đồng · từ 10/2026</div>
+        <h2 class="h2">Hiểu rồi thì <span class="hl">không phải làm một mình</span></h2>
+        <ul>
+          <li><b>01</b>Nhóm theo ngành: F&amp;B, bán lẻ, dịch vụ, sản xuất nhỏ, làm nội dung</li>
+          <li><b>02</b>Hỏi BẢN84 hằng tuần: câu hỏi của nhóm thành đề tài kế tiếp</li>
+          <li><b>03</b>Gặp mặt định kỳ: người đang làm kể cách làm</li>
+        </ul>
+        <p class="note">Không thu phí gọi vốn. Không quảng cáo sản phẩm đầu tư. Không tôn vinh cá nhân, không làm thương hiệu cho ai.</p>
+        <a class="btn navy" href="#hoi">Đăng ký tham gia</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hoi" class="dark">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">Hỏi BẢN84</div><h2 class="h2">Có câu hỏi về kinh tế hay AI? <span class="hl">Hỏi đi.</span></h2></div>
+      <p class="lead">Viết câu hỏi hoặc lời nhắn, sao chép, gửi qua email hay tin nhắn TikTok. Câu hỏi hay được trả lời bằng một video.</p>
+    </div>
+    <div class="ask-grid">
+      <form class="ask" id="askForm">
+        <div><label for="who">BẠN LÀ AI</label>
+          <select id="who" name="who">
+            <option value="người trẻ đang tìm hướng đi">Người trẻ đang tìm hướng đi</option>
+            <option value="người mới khởi nghiệp (0–3 năm)">Người mới khởi nghiệp (0–3 năm)</option>
+            <option value="chủ hộ kinh doanh / SME">Chủ hộ kinh doanh / SME</option>
+            <option value="người quan tâm kinh tế">Người quan tâm kinh tế</option>
+          </select></div>
+        <div><label for="q">CÂU HỎI HOẶC LỜI NHẮN</label>
+          <textarea id="q" name="q" placeholder="Ví dụ: VAT giảm 2% thì quán cà phê 3 nhân viên của tôi đổi dòng tiền thế nào? — hoặc: Tôi muốn tham gia nhóm F&amp;B."></textarea></div>
+        <div class="row">
+          <button class="btn amber" type="submit">Sao chép để gửi</button>
+          <span class="hint" id="askHint">Nội dung sẽ được sao chép; dán vào email hoặc tin nhắn TikTok.</span>
+        </div>
+        <div class="out" id="askOut" hidden></div>
+      </form>
+      <div class="chips">
+        <div class="chip-row"><div><b>EMAIL</b><span>Infor@ban84vn.com</span></div><button class="cpy" data-copy="Infor@ban84vn.com" type="button">Sao chép</button></div>
+        <div class="chip-row"><div><b>TIKTOK</b><span>@ban84vn</span></div><a class="cpy" href="https://www.tiktok.com/@ban84vn" target="_blank" rel="noopener">Mở kênh</a></div>
+        <div class="chip-row"><div><b>ĐIỆN THOẠI</b><span>096 396 4646</span></div><button class="cpy" data-copy="0963964646" type="button">Sao chép</button></div>
+        <p class="hint" style="margin-top:14px;">BẢN84 không khuyến nghị đầu tư và không trả lời câu hỏi về mua bán tài sản tài chính.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ve">
+  <div class="wrap about">
+    <div class="emb"><img src="img/logo-circle.png" alt="Biểu tượng BẢN84"></div>
+    <div class="txt">
+      <div class="eyebrow">Về BẢN84</div>
+      <h2 class="h2" style="margin-bottom:18px;">Một tòa soạn nhỏ, <span class="hl">một mục tiêu rõ</span></h2>
+      <p>Kênh tin tức kinh tế, AI ứng dụng và khởi nghiệp cho người trẻ Việt Nam. <b>84</b> là Việt Nam. <b>Dấu hỏi</b> là cách làm việc. <b>Gạch chéo hướng lên</b> là niềm tin vào thế hệ trẻ, vì một Việt Nam hùng cường.</p>
+      <p>Ba giá trị không đổi: <b>thật</b>, <b>có ích</b>, <b>gần</b>.</p>
+      <p class="small">Bạn làm nội dung, dẫn chương trình hay đang xây một cộng đồng từ con số nhỏ và muốn đồng hành? Viết cho Infor@ban84vn.com.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/lockup-dark.png" alt="BẢN84 — Business · Applied AI · News">
+    <div class="fn"><a href="#de-tai">Đề tài</a><a href="#lich">Lịch phát</a><a href="#tin-duoc">Vì sao tin được</a><a href="#cong-dong">Cộng đồng</a><a href="https://www.tiktok.com/@ban84vn" target="_blank" rel="noopener">TikTok</a></div>
+    <div>© 2026 BẢN84 · Hiểu đúng để dám bắt đầu.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'), nav=document.getElementById('nav');
+  if(btn&&nav){
+    btn.addEventListener('click',function(){ var o=nav.classList.toggle('open'); btn.setAttribute('aria-expanded', o?'true':'false'); });
+    nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ nav.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }); });
+  }
+  function copyText(t, el, label){
+    var done=function(){ if(!el) return; var old=el.textContent; el.textContent=label||'Đã sao chép'; el.classList.add('done'); setTimeout(function(){ el.textContent=old; el.classList.remove('done'); },1600); };
+    var fallback=function(){ var ta=document.createElement('textarea'); ta.value=t; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); try{ document.execCommand('copy'); done(); }catch(e){} document.body.removeChild(ta); };
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(done, fallback); } else { fallback(); }
+  }
+  document.querySelectorAll('button.cpy[data-copy]').forEach(function(b){ b.addEventListener('click',function(){ copyText(b.getAttribute('data-copy'), b); }); });
+  var form=document.getElementById('askForm'), out=document.getElementById('askOut'), hint=document.getElementById('askHint');
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var who=document.getElementById('who').value, q=(document.getElementById('q').value||'').trim();
+      if(!q){ hint.textContent='Bạn chưa viết câu hỏi hoặc lời nhắn.'; document.getElementById('q').focus(); return; }
+      var msg='Chào BẢN84, tôi là '+who+'. '+q+'\n\nGửi từ trang BẢN84 · '+new Date().toLocaleDateString('vi-VN');
+      out.textContent=msg; out.hidden=false;
+      copyText(msg, form.querySelector('button[type=submit]'), 'Đã sao chép');
+      hint.textContent='Đã sao chép. Dán vào email Infor@ban84vn.com hoặc tin nhắn TikTok @ban84vn.';
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
