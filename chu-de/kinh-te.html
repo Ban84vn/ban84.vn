@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kinh tế &amp; chính sách · BẢN84</title>
 <meta name="description" content="Chuyện vĩ mô, kể đến tận túi tiền">
-<link rel="canonical" href="https://ban84.vn/chu-de/kinh-te.html">
+<link rel="canonical" href="https://ban84vn.com/chu-de/kinh-te.html">
 <meta property="og:site_name" content="BẢN84"><meta property="og:locale" content="vi_VN">
 <meta property="og:title" content="Kinh tế &amp; chính sách · BẢN84">
 <meta property="og:description" content="Chuyện vĩ mô, kể đến tận túi tiền">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://ban84.vn/chu-de/kinh-te.html">
-<meta property="og:image" content="https://ban84.vn/img/cover/outlet-dau-tien-hang-viet-30-40.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Kinh tế &amp; chính sách · BẢN84"><meta name="twitter:description" content="Chuyện vĩ mô, kể đến tận túi tiền"><meta name="twitter:image" content="https://ban84.vn/img/cover/outlet-dau-tien-hang-viet-30-40.jpg">
+<meta property="og:url" content="https://ban84vn.com/chu-de/kinh-te.html">
+<meta property="og:image" content="https://ban84vn.com/img/cover/outlet-dau-tien-hang-viet-30-40.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Kinh tế &amp; chính sách · BẢN84"><meta name="twitter:description" content="Chuyện vĩ mô, kể đến tận túi tiền"><meta name="twitter:image" content="https://ban84vn.com/img/cover/outlet-dau-tien-hang-viet-30-40.jpg">
 <meta name="theme-color" content="#031A34">
 <link rel="icon" href="../img/icon-192.png" type="image/png" sizes="192x192"><link rel="icon" href="../img/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="../img/icon-180.png"><link rel="manifest" href="../manifest.webmanifest">
@@ -262,7 +262,7 @@ footer .tagline{font-size:12.5px;max-width:48ch}
   var form=document.getElementById('askForm'),out=document.getElementById('askOut'),hint=document.getElementById('askHint');
   if(form){form.addEventListener('submit',function(e){e.preventDefault();var who=document.getElementById('who').value,q=(document.getElementById('q').value||'').trim();
     if(!q){hint.textContent='Bạn chưa viết câu hỏi hoặc lời nhắn.';document.getElementById('q').focus();return;}
-    var msg='Chào BẢN84, tôi là '+who+'. '+q+'\n\nGửi từ ban84.vn · '+new Date().toLocaleDateString('vi-VN');out.textContent=msg;out.hidden=false;copyText(msg,form.querySelector('button[type=submit]'),'Đã sao chép');hint.textContent='Đã sao chép. Dán vào email Infor@ban84vn.com hoặc tin nhắn TikTok @ban84vn.';});}
+    var msg='Chào BẢN84, tôi là '+who+'. '+q+'\n\nGửi từ ban84vn.com · '+new Date().toLocaleDateString('vi-VN');out.textContent=msg;out.hidden=false;copyText(msg,form.querySelector('button[type=submit]'),'Đã sao chép');hint.textContent='Đã sao chép. Dán vào email Infor@ban84vn.com hoặc tin nhắn TikTok @ban84vn.';});}
   var fb=document.querySelector('.fbwrap'); if(fb && /claude/.test(location.hostname)){var fr=fb.querySelector('iframe'),fl=fb.querySelector('.fallback'); if(fr) fr.remove(); if(fl) fl.hidden=false;}
   document.querySelectorAll('button[data-share]').forEach(function(b){b.addEventListener('click',function(){var d={title:b.getAttribute('data-title'),url:b.getAttribute('data-share')};
     if(navigator.share){navigator.share(d).catch(function(){});}else{copyText(d.url,b,'Đã sao chép link');}});});
