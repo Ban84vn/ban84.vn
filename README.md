@@ -1,9 +1,14 @@
-# ban84.vn
+# ban84vn.com
 
 BẢN84 — kênh phân tích & góc nhìn về kinh tế, chính sách và AI ứng dụng cho người trẻ Việt Nam. Không phải cơ quan báo chí.
 
-Trang tĩnh, phát hành qua GitHub Pages (tên miền ban84.vn qua tệp `CNAME`). Không cần hosting hay cơ sở dữ liệu:
+Trang tĩnh, phát hành qua GitHub Pages tại **https://ban84vn.com** (tên miền đặt qua tệp `CNAME`). Không cần hosting hay cơ sở dữ liệu:
 video nhúng từ Fanpage BẢN84, tìm kiếm chạy trong trình duyệt từ `data/search.json`.
+
+## DNS (Squarespace Domains)
+- `@` A → 185.199.108.153 · 185.199.109.153 · 185.199.110.153 · 185.199.111.153
+- `www` CNAME → ban84vn.github.io
+- Giữ nguyên MX `smtp.google.com` và TXT SPF của Google Workspace (email Infor@ban84vn.com).
 
 ## Cấu trúc
 - `index.html`, `video.html`, `chu-de/*.html` — trang chủ, video, chủ đề
