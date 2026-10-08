@@ -174,6 +174,59 @@ section.about{padding-block:72px}
 @media (max-width:900px){.comm{grid-template-columns:1fr;gap:28px}}
 .aboutrow{display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:center}.aboutrow img{width:200px;height:200px;border-radius:50%;box-shadow:0 0 0 3px rgba(3,26,52,.08);margin:0 auto}.aboutrow p{font-size:17px;color:var(--ink2);max-width:56ch}.aboutrow p+p{margin-top:12px}.aboutrow p b{color:var(--ink)}
 @media (max-width:900px){.aboutrow{grid-template-columns:1fr;gap:24px}}
+
+/* ===== video-first ===== */
+.player{position:relative;aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:#000;box-shadow:0 30px 60px rgba(0,0,0,.32)}
+.player>a,.player>iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;text-decoration:none}
+.player img{width:100%;height:100%;object-fit:cover}
+.player .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,26,52,.35) 0%,rgba(3,26,52,0) 22%,rgba(3,26,52,0) 55%,rgba(3,26,52,.82) 100%)}
+.player .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;background:var(--amber);display:flex;align-items:center;justify-content:center;box-shadow:0 14px 34px rgba(0,0,0,.45);transition:transform .18s ease}
+.player a:hover .play{transform:translate(-50%,-50%) scale(1.07)}
+.player .play svg{width:30px;height:30px;margin-left:5px}
+.player .top{position:absolute;left:14px;right:14px;top:14px;display:flex;justify-content:space-between;align-items:center}
+.player .top img{width:auto;height:18px}
+.player .cap{position:absolute;left:16px;right:16px;bottom:14px;display:flex;justify-content:space-between;align-items:center;font-size:10.5px;letter-spacing:.18em;font-weight:800;color:#FBF1E2;text-transform:uppercase}
+.player .tag.cat{background:rgba(3,26,52,.78)}
+/* home video hero */
+.vhero{background:var(--navy);color:var(--on-navy);padding-block:44px 52px}
+.vh-grid{display:grid;grid-template-columns:360px minmax(0,1fr);gap:56px;align-items:stretch}
+.vh-info{min-width:0;display:flex;flex-direction:column}
+.vh-info .eyebrow{color:var(--amber)}
+.vh-info .meta{color:var(--on-navy2);margin-top:14px}
+.vh-info h1{font-size:clamp(28px,3.3vw,40px);font-weight:800;margin-top:14px;max-width:24ch;line-height:1.15}
+.vh-info h1 a{text-decoration:none}.vh-info h1 a:hover{color:var(--amber)}
+.vh-info .sum{font-size:16.5px;color:var(--on-navy2);margin-top:14px;max-width:56ch;line-height:1.6}
+.vh-info .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.rail-head{display:flex;justify-content:space-between;align-items:baseline;margin-top:auto;padding-top:26px;border-top:1px solid var(--navy-line)}
+.rail-head b{font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--amber)}
+.rail-head a{font-size:13px;font-weight:700;color:var(--on-navy2);text-decoration:none}.rail-head a:hover{color:var(--amber)}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:104px;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:14px 3px 8px;align-items:start;scrollbar-width:thin;scrollbar-color:rgba(251,241,226,.25) transparent}
+.ritem{scroll-snap-align:start;background:none;border:0;padding:0;text-align:left;color:inherit;cursor:pointer;font:inherit;display:flex;flex-direction:column;min-width:0}
+.ritem .th{display:block;width:100%;aspect-ratio:9/16;border-radius:10px;overflow:hidden;position:relative;background:#0A2440;box-shadow:0 0 0 2px transparent;transition:box-shadow .15s ease,transform .15s ease}
+.ritem:hover .th{transform:translateY(-2px)}
+.ritem.on .th{box-shadow:0 0 0 2px var(--amber)}
+.ritem .th img{width:100%;height:100%;object-fit:cover;display:block}
+.ritem .th i{position:absolute;left:8px;bottom:8px;width:24px;height:24px;border-radius:50%;background:var(--amber);display:flex;align-items:center;justify-content:center}
+.ritem .th i svg{width:10px;height:10px;margin-left:2px}
+.ritem .t{font-size:12px;line-height:1.38;font-weight:600;margin-top:8px;color:var(--on-navy);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.ritem.on .t{color:var(--amber)}
+@media (max-width:900px){.vhero{padding-block:24px 36px}.vh-grid{grid-template-columns:1fr;gap:24px}.vh-player{max-width:340px;width:100%;margin-inline:auto}.rail-head{margin-top:26px}}
+.sec-head.first{border-top:0;padding-top:44px}
+/* article video-first */
+.post-top{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:56px;align-items:start}
+.post-top .pl .credit{font-size:11.5px;color:var(--muted);margin-top:12px;text-align:center}
+.post-top .pl .credit a{color:inherit;text-decoration:none;border-bottom:1px solid var(--line)}
+.post-top .txt .eyebrow{margin-top:30px;display:block}
+.post-top .txt .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+@media (max-width:900px){.post-top{grid-template-columns:1fr;gap:26px}.post-top .pl{order:-1;max-width:340px;width:100%;margin-inline:auto}}
+/* video gallery */
+.vgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 24px;padding-block:12px 64px}
+.vcard2 .player{border-radius:14px;box-shadow:0 18px 36px rgba(3,26,52,.16)}
+.vcard2 .player .play{width:58px;height:58px}.vcard2 .player .play svg{width:22px;height:22px;margin-left:4px}
+.vcard2 .player .cap{display:none}
+.vcard2 .meta{margin-top:14px}
+.vcard2 h3{font-size:16px;font-weight:700;margin-top:8px;line-height:1.38}.vcard2 h3 a{text-decoration:none}.vcard2 h3 a:hover{color:var(--accent)}
+@media (max-width:1000px){.vgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media (max-width:700px){.vgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 14px}.vcard2 h3{font-size:14.5px}}
 /* footer */
 footer{background:var(--navy);color:var(--on-navy2);border-top:1px solid var(--navy-line);padding-block:40px;font-size:13px;margin-top:40px}
 footer .wrap{display:grid;grid-template-columns:auto 1fr;grid-template-areas:"logo links" "follow tagline";gap:22px 40px;align-items:center}footer img{height:58px;width:auto;grid-area:logo}
@@ -203,21 +256,16 @@ footer .tagline{font-size:12.5px;max-width:48ch}
 
 <main class="wrap">
 <article class="post">
-  <div class="head">
-    <div class="meta" style="margin-top:0"><span class="tag cat">KINH TẾ</span><span>20/09/2026</span><span>·</span><span>Video 3–4 phút</span></div>
-    <h1>Ngân hàng bị chặn cho vay &#x27;sân sau&#x27;: vốn có chảy tới xưởng nhỏ của bạn?</h1>
-    <p class="standfirst">Siết dồn vốn cho &#x27;sân sau&#x27;: xưởng nhỏ dễ vay hơn? &#x27;Sân sau&#x27; ở đây là doanh nghiệp, dự án nằm cùng hệ sinh thái với một tập đoàn. Theo VnExpress, Chính phủ yêu cầu chấm dứt cho vay tập trung vào doanh nghiệp &#x27;sân sau&#x27;.</p>
-  </div>
-  <figure class="lede"><img src="../img/photo/ngan-hang-thoi-san-sau-von-cho-sme.jpg" srcset="../img/photo/s/ngan-hang-thoi-san-sau-von-cho-sme.jpg 800w, ../img/photo/ngan-hang-thoi-san-sau-von-cho-sme.jpg 1600w" sizes="(max-width:1120px) 100vw, 1120px" width="1600" height="900" fetchpriority="high" alt="Ngân hàng bị chặn cho vay &#x27;sân sau&#x27;: vốn có chảy tới xưởng nhỏ của bạn?" style="object-position:center">
-    <figcaption>Ảnh: <a href="https://www.pexels.com/photo/38865107/" target="_blank" rel="noopener">Bùi Vy Vân · Pexels</a></figcaption></figure>
-  <div class="video">
-    <div class="fbwrap"><iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/watch/?v=2968611943492050&show_text=false&autoplay=false" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen loading="lazy" title="Video BẢN84"></iframe>
-      <a class="fallback" href="https://www.facebook.com/watch/?v=2968611943492050" target="_blank" rel="noopener" hidden><img src="../img/cover/ngan-hang-thoi-san-sau-von-cho-sme.jpg" alt=""><div class="play"><span><svg viewBox="0 0 24 24" fill="#4A2E0A"><path d="M8 5v14l11-7z"/></svg></span></div></a></div>
-    <div class="vside">
-      <div class="eyebrow">Điểm chính</div>
+  <div class="post-top">
+    <div class="txt">
+      <div class="meta" style="margin-top:0"><span class="tag cat">KINH TẾ</span><span>20/09/2026</span><span>·</span><span>Video 3–4 phút</span></div>
+      <h1>Ngân hàng bị chặn cho vay &#x27;sân sau&#x27;: vốn có chảy tới xưởng nhỏ của bạn?</h1>
+      <p class="standfirst">Siết dồn vốn cho &#x27;sân sau&#x27;: xưởng nhỏ dễ vay hơn? &#x27;Sân sau&#x27; ở đây là doanh nghiệp, dự án nằm cùng hệ sinh thái với một tập đoàn. Theo VnExpress, Chính phủ yêu cầu chấm dứt cho vay tập trung vào doanh nghiệp &#x27;sân sau&#x27;.</p>
+      <span class="eyebrow">Điểm chính</span>
       <ol class="points"><li>Siết dồn vốn cho &#x27;sân sau&#x27;: xưởng nhỏ dễ vay hơn?</li><li>Mục tiêu mở vốn cho xưởng cụ thể đến đâu?</li><li>Ngân hàng sẽ xét xưởng bằng gì?</li><li>Dữ liệu tiền hàng của xưởng kể được gì?</li><li>Xưởng được gì và phải tốn gì?</li><li>Khi nào cơ hội có thể thành tiền vay?</li><li>Tuần này xưởng nên kiểm việc gì?</li><li>Dữ liệu nào nên chuẩn bị trước?</li></ol>
       <div class="btns"><a class="btn amber" href="https://www.facebook.com/watch/?v=2968611943492050" target="_blank" rel="noopener">Xem trên Fanpage</a><a class="btn line" href="https://www.tiktok.com/@ban84vn" target="_blank" rel="noopener">TikTok</a></div>
     </div>
+    <div class="pl"><div class="player" data-fb="2968611943492050"><a href="https://www.facebook.com/watch/?v=2968611943492050" target="_blank" rel="noopener" aria-label="Phát video: Ngân hàng bị chặn cho vay &#x27;sân sau&#x27;: vốn có chảy tới xưởng nhỏ của bạn?"><img src="../img/poster/ngan-hang-thoi-san-sau-von-cho-sme.jpg" width="720" height="1280" alt="" fetchpriority="high"><span class="shade"></span><span class="play"><svg viewBox="0 0 24 24" fill="#4A2E0A"><path d="M8 5v14l11-7z"/></svg></span><span class="cap"><span class="tag cat">KINH TẾ</span><span>Video · 3–4 phút</span></span></a></div><p class="credit">Ảnh nền: <a href="https://www.pexels.com/photo/38865107/" target="_blank" rel="noopener">Bùi Vy Vân · Pexels</a></p></div>
   </div>
   <div class="ask"><div class="eyebrow">Câu hỏi mở</div><p>Ở xưởng của bạn, khoản thu nào khó giải thích nhất khi ngân hàng hỏi?</p><a class="btn ghost" href="../gioi-thieu.html#hoi">Trả lời BẢN84</a></div>
   <details class="more"><summary>Toàn văn lời bình <span>835 từ</span></summary><div class="prose"><p>Siết dồn vốn cho &#x27;sân sau&#x27;: xưởng nhỏ dễ vay hơn? &#x27;Sân sau&#x27; ở đây là doanh nghiệp, dự án nằm cùng hệ sinh thái với một tập đoàn. Theo VnExpress, Chính phủ yêu cầu chấm dứt cho vay tập trung vào doanh nghiệp &#x27;sân sau&#x27;. Cho vay tập trung là dồn vốn vào một nhóm hẹp.</p><p>Hãy theo chân xưởng in bao bì ở vùng ven. Tiền hàng của xưởng chủ yếu vào tài khoản cá nhân. Xưởng đang muốn vay để mua giấy.</p><p>BẢN84 tách yêu cầu kiểm soát khỏi kết quả cho vay. Nhóm bị siết trước là các khách vay lớn cùng hệ sinh thái tập đoàn. Nguồn không nói phần vốn đó sẽ chuyển sang xưởng nhỏ, cũng không nói chuyển bao nhiêu.</p><p>Vốn bớt dồn cho nhóm lớn không được gắn nhãn cho xưởng nhỏ. Vì thế yêu cầu này mở khả năng, chưa bảo đảm xưởng vay được. Cơ hội mới chỉ mở ra, vậy mục tiêu cụ thể đến đâu?</p><p>Theo Thanh Niên, Quyết định 1809 đặt mục tiêu đến năm 2030. Ít nhất 300.000 doanh nghiệp nhỏ và vừa có dư nợ tại các tổ chức tín dụng. Dư nợ là tiền đã vay còn phải trả.</p><p>Đây là mục tiêu cho cả hệ thống. Nó khác với quyết định cấp tiền cho xưởng. Mục tiêu là mở rộng tiếp cận, còn hồ sơ xưởng vẫn phải được xét.</p><p>Hồ sơ vẫn phải được xét, vậy ngân hàng sẽ xem gì? Dòng tiền là tiền vào và tiền ra theo thời gian. Theo VnExpress, ngân hàng được yêu cầu mở rộng cách cho vay.</p><p>Đây là nhiệm vụ trong đề án, tức kế hoạch Chính phủ giao cho ngành ngân hàng. Căn cứ gồm phương án kinh doanh của xưởng. Dòng tiền và dữ liệu thanh toán cũng được nêu.</p><p>Dữ liệu thanh toán là lịch sử tiền chuyển vào và chuyển ra qua tài khoản của xưởng. Với xưởng, tiền khách trả có thể giúp giải thích nguồn trả nợ. Điều này tùy cách ngân hàng triển khai.</p><p>Xưởng có thể được xét bằng dòng tiền, thay vì chủ yếu dựa vào tài sản. Đã xét dòng tiền, dữ liệu tiền hàng của xưởng kể được gì? BẢN84 đề xuất đặt sao kê cạnh hóa đơn và tờ khai thuế.</p><p>Sao kê là bản ghi tiền vào và tiền ra của tài khoản. Xưởng đánh dấu khoản thu chưa giải thích được. Tiền qua tài khoản cá nhân cần nối được với đơn hàng.</p><p>Sự trùng khớp giúp câu chuyện tiền hàng dễ kiểm tra. Nguồn không quy định dùng tài khoản cá nhân sẽ bị loại. Xưởng cần hỏi ngân hàng chấp nhận bằng chứng nào.</p><p>Dữ liệu khớp giúp xưởng giải thích dòng tiền, dữ liệu lệch cần làm rõ. Dữ liệu cần làm rõ, vậy xưởng được gì và phải tốn gì? Xưởng phải dành công sức gom chứng từ.</p><p>Nếu ngân hàng dùng dữ liệu này, công sức ấy có ích. Xưởng có thêm căn cứ để xin xét vay. Nhưng khoản vay là tiền phải hoàn trả.</p><p>Khoản tiền ấy khác với doanh thu bán bao bì. Bán được hàng khác với đã thu được tiền. Khách trả chậm thì lịch trả nợ vẫn cần tính riêng.</p><p>Cơ hội vay đi cùng công sức chuẩn bị, còn doanh thu vẫn phụ thuộc khách. Chuẩn bị có tốn công, vậy khi nào cơ hội thành tiền vay? Theo VnExpress, chất lượng xét hồ sơ và kiểm tra việc sử dụng vốn vay phải được nâng lên.</p><p>Mục đích là hạn chế nợ cần chú ý và nợ xấu. BẢN84 hiểu là hồ sơ xưởng vẫn phải giải thích được nguồn trả nợ. Nguồn không nêu tiêu chí cụ thể.</p><p>Độ trễ nằm ở cách ngân hàng triển khai và chất lượng hồ sơ xưởng. Triển khai còn có độ trễ, tuần này xưởng nên kiểm việc gì? Hãy hỏi ngân hàng về cách xét theo dòng tiền.</p><p>Xin danh sách dữ liệu và khoảng thời gian cần cung cấp. Đối chiếu sao kê với hóa đơn và tờ khai thuế. Ghi rõ khoản lệch và nguyên nhân.</p><p>Hỏi thêm thời điểm trả nợ dự kiến. Đặt lịch ấy cạnh lúc khách trả tiền. Nếu chưa phù hợp, xưởng có thể hoãn vay.</p><p>Xưởng nên hỏi yêu cầu cụ thể và đối chiếu dữ liệu trước khi nộp. Đã biết việc cần kiểm, xưởng chọn chuẩn bị dữ liệu nào trước? Ưu tiên sao kê ba tháng gần nhất, đặt cạnh hóa đơn từng đơn hàng.</p><p>Quay lại câu hỏi đầu: siết dồn vốn cho &#x27;sân sau&#x27; không tự làm xưởng dễ vay hơn. Thứ xưởng đổi được là dữ liệu tiền hàng: dữ liệu rõ giúp hồ sơ dễ được xét hơn. Được xét chưa phải được duyệt, nên dữ liệu lệch thì làm rõ trước.</p><p>Ở xưởng của bạn, khoản thu nào khó giải thích nhất khi ngân hàng hỏi?</p></div></details>
@@ -259,6 +307,18 @@ footer .tagline{font-size:12.5px;max-width:48ch}
     if(!q){hint.textContent='Bạn chưa viết câu hỏi hoặc lời nhắn.';document.getElementById('q').focus();return;}
     var msg='Chào BẢN84, tôi là '+who+'. '+q+'\n\nGửi từ ban84vn.com · '+new Date().toLocaleDateString('vi-VN');out.textContent=msg;out.hidden=false;copyText(msg,form.querySelector('button[type=submit]'),'Đã sao chép');hint.textContent='Đã sao chép. Dán vào email Infor@ban84vn.com hoặc tin nhắn TikTok @ban84vn.';});}
   var fb=document.querySelector('.fbwrap'); if(fb && /claude/.test(location.hostname)){var fr=fb.querySelector('iframe'),fl=fb.querySelector('.fallback'); if(fr) fr.remove(); if(fl) fl.hidden=false;}
+  function embed(pl){var id=pl.getAttribute('data-fb'); if(!id||/claude/.test(location.hostname)) return false;
+    var f=document.createElement('iframe'); f.src='https://www.facebook.com/plugins/video.php?href='+encodeURIComponent('https://www.facebook.com/watch/?v='+id)+'&show_text=false&autoplay=true';
+    f.setAttribute('allow','autoplay; encrypted-media; picture-in-picture; web-share'); f.setAttribute('allowfullscreen',''); f.title='Video BẢN84'; pl.innerHTML=''; pl.appendChild(f); return true;}
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.player > a'); if(!a) return; if(embed(a.parentNode)) e.preventDefault();});
+  var vp=document.getElementById('vhPlayer');
+  document.querySelectorAll('.ritem').forEach(function(b){b.addEventListener('click',function(){ if(!vp) return; var d=b.dataset;
+    vp.setAttribute('data-fb',d.fb);
+    vp.innerHTML='<a href="https://www.facebook.com/watch/?v='+d.fb+'" target="_blank" rel="noopener" aria-label="Phát video"><img src="'+d.poster+'" alt=""><span class="shade"></span><span class="play"><svg viewBox="0 0 24 24" fill="#4A2E0A"><path d="M8 5v14l11-7z"/></svg></span><span class="cap"><span class="tag cat">'+d.cat+'</span><span>Video · 3–4 phút</span></span></a>';
+    var t=document.getElementById('vhTitle'); t.textContent=d.title; t.href=d.href; document.getElementById('vhRead').href=d.href;
+    document.getElementById('vhSum').textContent=d.sum; document.getElementById('vhMeta').innerHTML='<span class="tag cat">'+d.cat+'</span><span>'+d.date+'</span>';
+    document.querySelectorAll('.ritem').forEach(function(x){x.classList.toggle('on',x===b);});
+    embed(vp); if(window.innerWidth<900) vp.scrollIntoView({behavior:'smooth',block:'center'});});});
   document.querySelectorAll('button[data-share]').forEach(function(b){b.addEventListener('click',function(){var d={title:b.getAttribute('data-title'),url:b.getAttribute('data-share')};
     if(navigator.share){navigator.share(d).catch(function(){});}else{copyText(d.url,b,'Đã sao chép link');}});});
 })();
